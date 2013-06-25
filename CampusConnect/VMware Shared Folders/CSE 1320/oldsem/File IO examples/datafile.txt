@@ -1,6 +1,0 @@
-zebra 100
-fish  200
-total 300
-dog   250
-total 250
-horse 700
