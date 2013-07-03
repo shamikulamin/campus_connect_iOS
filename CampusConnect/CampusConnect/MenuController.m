@@ -8,6 +8,7 @@
 
 #import "MenuController.h"
 #import "ReportIncidentController.h"
+#import "MapViewController.h"
 
 /*TEST FOR COMMITING*/
 
@@ -47,5 +48,8 @@
 }
 
 - (IBAction)NotificationMap:(id)sender {
+    MapViewController *maps = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    [self presentViewController:maps animated:YES completion:nil];
+    
 }
 @end
