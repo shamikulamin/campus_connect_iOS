@@ -9,6 +9,7 @@
 #import "MenuController.h"
 #import "ReportIncidentController.h"
 #import "MapViewController.h"
+#import "CommunityMsgsController.h"
 
 /*TEST FOR COMMITING*/
 
@@ -17,6 +18,7 @@
 @end
 
 @implementation MenuController
+@synthesize header;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    ReportIncidentController *report = [[ReportIncidentController alloc] initWithNibName:@"ReportIncidentController" bundle:nil];
+    MapViewController *map = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    CommunityMsgsController *comm = [[CommunityMsgsController alloc] initWithNibName:@"CommunityMsgsController" bundle:nil];
+    self->reportIncident = report;
+    self->mapView = map;
+    self->commmsg = comm;
+    reportIncident.header = header;
+    commmsg.header = header;
+    mapView.header = header;
+    NSLog(@"%@",header);
+    NSLog(@"%@",commmsg.header);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -45,6 +58,9 @@
 }
 
 - (IBAction)NotificationList:(id)sender {
+    CommunityMsgsController *msg_lists = [[CommunityMsgsController alloc] initWithNibName:@"CommunityMsgsController" bundle:nil];
+    [self presentViewController:msg_lists animated:YES completion:nil];
+    
 }
 
 - (IBAction)NotificationMap:(id)sender {

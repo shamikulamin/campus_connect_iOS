@@ -11,6 +11,7 @@
 #import "ViewController.h"
 
 @implementation AppDelegate
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,6 +28,7 @@
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
+    viewController->devID=deviceToken;
 	NSLog(@"My token is: %@", deviceToken);
 }
 

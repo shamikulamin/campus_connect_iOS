@@ -260,6 +260,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">SendReport:</string>
+						<reference key="source" ref="800927087"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">131</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">DoneButton:</string>
 						<reference key="source" ref="864317739"/>
 						<reference key="destination" ref="372490531"/>
@@ -511,11 +520,11 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<reference ref="131339355"/>
 							<reference ref="993987773"/>
 							<reference ref="800927087"/>
 							<reference ref="838118820"/>
 							<reference ref="437251914"/>
+							<reference ref="131339355"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -843,7 +852,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">130</int>
+			<int key="maxID">131</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

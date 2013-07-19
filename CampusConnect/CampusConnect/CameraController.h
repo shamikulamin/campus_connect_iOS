@@ -14,6 +14,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *takePhotoButton;
 - (IBAction)getPic:(id)sender;
 - (IBAction)backButton:(id)sender;
+@property (nonatomic, strong) NSString *header;
 
 
 @end

@@ -32,11 +32,10 @@
     
     NSString *extension = @"png";
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    // NSString *documentsDirectory = [paths objectAtIndex:0];
+
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/Images/"]];
     NSArray *contents = [fileManager contentsOfDirectoryAtPath:imagePath error:NULL];
-    // NSArray *contents = [fileManager contentsOfDirectoryAtPath:documentsDirectory error:NULL];
+
     pngFiles = [NSMutableArray arrayWithCapacity: [contents count]];
     NSString *filename;
     for (filename in contents)
@@ -88,7 +87,7 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.accessoryType=UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = [imageCells objectAtIndex:indexPath.row];
     
     switch (indexPath.row) {
